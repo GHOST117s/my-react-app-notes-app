@@ -5,7 +5,11 @@ export default function EditModal({title,desc,editid,notes, setNotes }) {
   const updateHandler = () => {    
    const updateNotes= notes.map((elem)=>{       
   
-    if(editid === elem.id){            
+    if(editid === elem.id){    
+      
+      console.log(elem.title,elem.desc);
+      
+      
     return(  {...elem,title:document.getElementById("edittitle").value ,
                 desc:document.getElementById("editdesc").value 
               })
