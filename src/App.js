@@ -20,7 +20,7 @@ export default function App() {
       <div className=" container ">
         <div className="row d-flex ">
           <div className="card-group mt-1 justify-content-start">
-            <h1 className='mb-3 d-flex justify-content-center '>Your Notes</h1>
+            <h1 className='mb-3 m-4 d-flex justify-content-center '>Your Notes</h1>
             {
               notes.length===0?<div className="card  mb-3">
               <div className="card-body">

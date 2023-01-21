@@ -1,5 +1,5 @@
 import React from "react";
-import { useRef  } from "react";
+// import { useRef  } from "react";
 
 
 export default function Notes({element,notes,setNotes,seteditid,check,setcheck}) {
@@ -16,37 +16,6 @@ const onCheck = (id) =>{
 }
 
 
-
-
-// const Oncheck = (id) =>{
-//   const idcheck =  notes. filter((elem)=>{
-//     if(elem.id==id){
-     
-      
-//     }
-//     setcheck(!check);
-
-//   })
-// }
-
-// const onCheck = (id) =>{
-//   const checkSt = notes.filter((elem)=>{
-//     // console.log(elem)
-//     if(elem.id!==id){
-//       setcheck(!check)
-//       return elem
-      
-      
-//     }
-//     // console.log(id)
-  
- 
-
-//   })
-   
-//     console.log(checkSt);
-// }
-  // console.log(element);
   const removeHandler =(id)=>{
     const newNotes = notes.filter((elem)=>{
       if(elem.id!==id){
@@ -57,20 +26,20 @@ const onCheck = (id) =>{
     })
   setNotes(newNotes)
     // console.log(notes);
-   
+ 
 
   }
   const editHandler = (id) =>{
+    console.log(id);
+  notes.filter((elem)=>{
     seteditid(id)
-    // console.log(id)
-    notes.filter((elem)=>{
-      if(elem.id===id)
-      document.getElementById("edittitle").value = elem.title
-      document.getElementById("editdesc").value = elem.desc
-
-    })
+    if(elem.id === id){
+      document.getElementById("edittitle").value = elem.title;
+      document.getElementById("editdesc").value = elem.desc;
+    }
+  })
   }
-
+ 
   return (
     <>
 <div className="card-row m-5">
