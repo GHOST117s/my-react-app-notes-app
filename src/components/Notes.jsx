@@ -16,6 +16,8 @@ const onCheck = (id) =>{
 }
 
 
+
+
 // const Oncheck = (id) =>{
 //   const idcheck =  notes. filter((elem)=>{
 //     if(elem.id==id){
