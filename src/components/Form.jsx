@@ -42,12 +42,12 @@ export default function Form({title,settitle,desc,setDesc,notes,setNotes,check,s
         <div className="col-md-5 ">
         <form style={{border:"2px solid #ced4da",borderRadius:"10px",padding:"30px"}} >
   <div className="mb-3 ">
-    <label for="exampleInputEmail1" className="form-label">Title</label>
+    <label  className="form-label">Title</label>
     <input type="text" className="form-control" id="title" placeholder='Enter Title' value={title} onChange={inputHandler}/>
     
   </div>
   <div className="mb-3">
-    <label for="exampleInputPassword1" className="form-label">Description</label>
+    <label  className="form-label">Description</label>
     <textarea name="desc" id="desc" cols="30" rows="3" className='form-control' placeholder='Enter Your Description' value={desc} onChange={inputHandler}></textarea>
   </div>
   

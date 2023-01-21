@@ -73,9 +73,9 @@ const onCheck = (id) =>{
 
   return (
     <>
-<div className="row">
-  <div className="col-sm-6">
-    <div className={`card ${check.includes(element.id)? 'bg-secondary':''}`}>
+<div className="card-row m-5">
+  {/* <div className="card p-4 ml-4 "> */}
+    <div className={`card ${check.includes(element.id)? 'bg-info':''}`}>
   <div className="card-body " style={{textTransform:"capitalize"}}>
     <h5 className="card-title">{element.title}</h5>
     <p className="card-text">{element.desc}</p>
@@ -84,7 +84,7 @@ const onCheck = (id) =>{
     onCheck(element.id)
     // console.log(element.id)
   }/>
-  <label className="form-check-label mb-6" for="flexCheckDefault">
+  <label className="form-check-label mb-6" htmlFor="flexCheckDefault">
     Done
   </label>
 </div>
@@ -101,7 +101,7 @@ const onCheck = (id) =>{
   </div>
 </div>
 </div>
-</div>
+{/* </div> */}
     </>
   );
 }

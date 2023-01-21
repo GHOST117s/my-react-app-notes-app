@@ -18,8 +18,8 @@ export default function App() {
       <Navbar />
       <Form title={title} settitle={settitle} desc={desc} setDesc={setDesc} notes={notes} setNotes={setNotes}  />
       <div className=" container ">
-        <div className="col d-flex justify-content-center">
-          <div className="col-md-10">
+        <div className="row d-flex ">
+          <div className="card-group mt-1 justify-content-start">
             <h1 className='mb-3 d-flex justify-content-center '>Your Notes</h1>
             {
               notes.length===0?<div className="card  mb-3">
