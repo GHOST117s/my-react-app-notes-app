@@ -2,29 +2,64 @@ import React from 'react'
 
 export default function EditModal({title,desc,editid,notes, setNotes }) {
   // console.log(editid);
-  const updateHandler = () => {    
-   const updateNotes= notes.map((elem)=>{       
+
+  // old style to update the title and description without  validation
+
+  // const updateHandler = () => {    
+  //  const updateNotes= notes.map((elem)=>{       
   
-    if(editid === elem.id){    
+  //   if(editid === elem.id){    
       
-      console.log(elem.title,elem.desc);
+  //     console.log(elem.title,elem.desc);
       
       
-    return(  {...elem,title:document.getElementById("edittitle").value ,
-                desc:document.getElementById("editdesc").value 
-              })
-    }else{
-      return elem
+  //   return(  {...elem,title:document.getElementById("edittitle").value ,
+  //               desc:document.getElementById("editdesc").value 
+  //             })
+  //   }else{
+  //     return elem
+  //   }
+    
+
+  //   })
+
+  //   // console.log(updateNotes);
+    
+  //   setNotes(updateNotes);
+    
+  // }
+
+  // updateNotes with validation
+
+  const updateHandler = () => {    
+    const newTitle = document.getElementById("edittitle").value.trim();
+    const newDesc = document.getElementById("editdesc").value.trim();
+    
+    if (!newTitle) {
+      alert("Please Input a new title")
+      // Show an error message or alert if the title is empty
+      return;
     }
     
-
-    })
-
-    // console.log(updateNotes);
+    if (!newDesc) {
+      alert("Please Input a new description")
+      // Show an error message or alert if the desc is empty
+      return;
+    }
+    
+    const updateNotes = notes.map((elem) => {       
+      if(editid === elem.id){    
+        return(  {...elem,title: newTitle, desc: newDesc});
+      }else{
+        return elem
+      }
+    });
     
     setNotes(updateNotes);
-    
   }
+
+
+
   
   return (
     <>

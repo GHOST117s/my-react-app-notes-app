@@ -22,7 +22,7 @@ export default function App() {
           <div className="card-group mt-1 justify-content-start">
             <h1 className='mb-3 m-4 d-flex justify-content-center '>Your Notes</h1>
             {
-              notes.length===0?<div className="card  mb-3">
+              notes.length===0?<div className="card " style={{width:"18rem"}} >
               <div className="card-body">
                 <h5 className="card-title">Message</h5>
                 <p className="card-text">No Notes Found.</p>                          
